@@ -4,11 +4,9 @@
  * @list: head of linked list
  * Return: 1 if there is a cycle, 0 if there is no cycle
  */
-
 int check_cycle(listint_t *list)
 {
-	listint_t *fast_pointer;
-	listint_t *slow_pointer;
+	listint_t *fast_pointer, *slow_pointer;
 
 	if (list == NULL)
 		return (0);
@@ -25,4 +23,3 @@ int check_cycle(listint_t *list)
 	}
 	return (0);
 }
-
