@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 """
 This is the "Single Linked List" module.
+Class Node takes in integer values as data within each node,
+and a next attribute which points to the next node or to None.
+Class SinglyLinkedList initializes a default head of None.
+Method sorted_insert handles all nodes created and adds them to
+the linked list sorted by the int value stored within.
 """
 
 
