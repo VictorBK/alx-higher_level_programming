@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """
-Define a class Square.
+Defines a class Square
 """
+
 
 class Square:
     """
@@ -60,4 +61,3 @@ class Square:
         Prints square with #'s
         """
         print("\n".join(["#" * self.__size for rows in range(self.__size)]))
-
