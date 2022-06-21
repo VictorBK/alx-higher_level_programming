@@ -5,29 +5,59 @@ Define a class Square.
 """
 
 class Square:
-    """A class that defines a square by size, which defaults 0.
-    Square can also get area, and print square using '#'.
     """
+    class Square definition
+    Args:
+        size (int): size of a side in square
+    Functions:
+        __init__(self, size)
+        size(self)
+        size(self, value)
+        area(self)
+        print(self)
+    """
+
     def __init__(self, size=0):
+        """
+        Initializes square
+        Attributes:
+            size (int): defaults to 0 if none; don't use __size to call setter
+        """
         self.size = size
 
     @property
     def size(self):
+        """"
+        Getter
+        Return: size
+        """
         return self.__size
 
     @size.setter
-    def size(self, size):
-        if type(size) != int:
+    def size(self, value):
+        """
+        Setter
+        Args:
+            value: sets size to value if int and >= 0
+        """
+        if type(value) is not int:
             raise TypeError("size must be an integer")
-        if size < 0:
+        elif value < 0:
             raise ValueError("size must be >= 0")
-        self.__size = size
+        else:
+            self.__size = value
 
     def area(self):
-        return self.__size * self.__size
+        """
+        Calculates area of square
+        Returns:
+            area
+        """
+        return (self.__size)**2
 
     def my_print(self):
-        if self.__size is 0:
-            print("")
-        for i in range(self.__size):
-            print("#" * self.__size)
+        """
+        Prints square with #'s
+        """
+        print("\n".join(["#" * self.__size for rows in range(self.__size)]))
+
