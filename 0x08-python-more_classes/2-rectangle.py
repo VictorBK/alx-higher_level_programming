@@ -22,6 +22,7 @@ class Rectangle:
         area(self)
         perimeter(self)
     """
+    
     def __init__(self, width=0, height=0):
         """ Initializes rectangles """
         self.width = width
