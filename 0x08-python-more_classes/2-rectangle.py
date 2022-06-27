@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 """
-Create two privte instances attributes of
-width and height
-and public area and perimeter methods
+Create two privte instances attributes:
 """
 
 
