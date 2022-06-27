@@ -2,6 +2,7 @@
 
 """Define a class rectangle"""
 
+
 class Rectangle:
     """Define an empty class"""
     pass
