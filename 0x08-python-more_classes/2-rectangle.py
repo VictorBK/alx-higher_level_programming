@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
 """
-Create two privte instances attributes:
+Create two private instances attributes:
 """
 
 
@@ -10,15 +9,15 @@ class Rectangle():
     Attribute (private): width
     Attribute (private): height
     @property(height) - retrieve value
-    @height.setter - set value
+    @height.setter - set the value
     @property(width) - retrieve value
-    @width.setter - set value
+    @width.setter - set the value
     """
-    
+
     def __init__(self, width=0, height=0):
-        """ Initializes rectangles """
-        self.width = width
+        """Initialize"""
         self.height = height
+        self.width = width
 
     @property
     def height(self):
@@ -47,9 +46,9 @@ class Rectangle():
     def area(self):
         """return the rectangle area"""
         return(self.__height * self.__width)
-    
+
     def perimeter(self):
         """return the rectangle perimeter"""
         if (self.__width == 0 or self.__height == 0):
             return 0
-        return (self.__width * 2 + self.__height *2)
+        return (self.__width * 2 + self.__height * 2)
