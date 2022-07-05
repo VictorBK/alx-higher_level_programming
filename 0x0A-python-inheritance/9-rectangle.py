@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Base Geometry Class inherited """
+""" Base Geometry Class """
 
 
 class BaseGeometry:
@@ -15,7 +15,7 @@ class BaseGeometry:
         if (value <= 0):
             raise ValueError(name + " must be greater than 0")
 
-""" Program that buildis a full rectangle """
+""" Program that builds a full rectangle """
 
 
 class Rectangle(BaseGeometry):
