@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-""" 
-Empty Geometry Class 
-with public instance method area
-"""
+""" Empty Geometry Class """
 
 
 class BaseGeometry:
