@@ -1,4 +1,4 @@
-The first directory containing JavaScript project that acts as a warmup into theJavaScript programming language.
+A directory that is a first of it kind containing tasks completed in JavaScript Programming Language.
 
 Background Context
 
