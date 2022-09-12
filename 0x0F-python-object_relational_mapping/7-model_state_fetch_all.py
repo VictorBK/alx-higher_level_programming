@@ -1,28 +1,24 @@
 #!/usr/bin/python3
-"""
-return all state objects from database via python
-parameters given to script: username, password, database
-"""
+'''script  for task 7'''
 
-from sys import argv
 from model_state import Base, State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-
+import sys
 
 if __name__ == "__main__":
-
-    # make engine for database
-    user = argv[1]
-    passwd = argv[2]
-    db = argv[3]
-    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.
-                           format(user, passwd, db), pool_pre_ping=True)
+    username = sys.argv[1]
+    password = sys.argv[2]
+    db_name = sys.argv[3]
+    host = 'localhost'
+    port = '3306'
+    engine = create_engine('mysql+mysqldb://{}:{}@{}:{}/{}'.format(
+             username, password, host, port, db_name), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
-    session = Session()
+    local_session = Session()
+    states = local_session.query(State).order_by(State.id).all()
+    local_session.close()
+    engine.dispose()
 
-    # query python instances in database
-    for instance in session.query(State).order_by(State.id):
-        print("{:d}: {:s}".format(instance.id, instance.name))
-
-    session.close()
+    for state in states:
+        print(str(state.id) + ': ' + state.name)
